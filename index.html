@@ -1,0 +1,263 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuentros Deportivos</title>
+  <style>
+
+    
+ 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      width: 260px;
+      height: 100vh;
+      background: linear-gradient(180deg, #1e3c72, #2a5298);
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+      box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    }
+
+   .logo img {
+  max-width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+    
+
+    .logo h2 { color: #fff; margin-bottom: 5px; }
+    .logo p { color: #dcdcdc; font-size: 0.9rem; }
+
+    nav ul { list-style: none; padding: 20px 0; }
+    nav li { margin: 5px 0; }
+
+    nav a {
+      display: block;
+      padding: 12px 25px;
+      color: #dcdcdc;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      padding-left: 35px;
+    }
+
+    /* Main */
+    main {
+      margin-left: 260px;
+      flex: 1;
+      padding: 30px;
+      transition: margin-left 0.3s ease;
+    }
+
+    main h1 { font-size: 2rem; margin-bottom: 20px; color: #1e3c72; }
+    main h2 { margin: 20px 0 10px; color: #2a5298; }
+    main p { color: #555; line-height: 1.6; }
+
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Chatbot */
+    #chatbox {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      background: #fafafa;
+    }
+    .msg { margin: 5px 0; }
+    .user { color: #2a5298; font-weight: bold; }
+    .bot { color: #333; }
+
+    #userInput {
+      width: 80%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #sendBtn {
+      padding: 10px 15px;
+      border: none;
+      background: #2a5298;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    .toggle-btn {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 24px;
+      background: #2a5298;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      aside.sidebar { transform: translateX(-100%); }
+      aside.sidebar.active { transform: translateX(0); }
+      main { margin-left: 0; }
+      .toggle-btn { display: block; }
+    }
+
+    .videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .videos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" id="toggleBtn">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+
+<div class="logo">
+  <img src="Gemini_Generated_Image_um92fium92fium92.png" alt="Conexión Deportiva Logo">
+  <p>Encuentros en vivo</p>
+</div>
+
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#Matchmaking">Matchmaking</a></li>
+        <li><a href="#available equipment">Available equipment</a></li>
+        <li><a href="#Municipal-tournaments">Municipal tournaments</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#soporte">Soporte</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="Introduction">
+      <h1>Bienvenido a Conexion Deportiva</h1>
+      <p>Aquí encontrarás toda la información sobre los próximos encuentros deportivos, resultados en vivo y noticias de tus equipos favoritos.</p>
+    </section>
+    <section id="Municipal-tournaments">
+  <h2>Torneos Municipales</h2>
+  <p>Revive las mejores jugadas callejeras de fútbol en los torneos locales.</p>
+
+  <!-- 🎥 Videos de jugadas callejeras -->
+  <div class="videos">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/X2LfznxKRlY" 
+      title="Jugadas callejeras fútbol" frameborder="0" allowfullscreen></iframe>
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8cOEaTg3t08" 
+      title="Fútbol callejero freestyle" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+
+    <section id="Municipal-tournaments">
+      <h2>Torneos Municipales</h2>
+      <p>Revive las mejores jugadas callejeras de fútbol en los torneos locales.</p>
+    </section>
+
+    <section id="equipos">
+      <h2>Equipos Destacados</h2>
+      <p>Zaragoza 1 vs 0 Limonar </p>
+        <p>Los Angeles 2 vs 2 Ansermsa Nuevo </p>
+        <p>Santa Fe 0 vs 0 Milan </p>
+        <p>San Pablo 4 vs 0 San Carlos </p>
+        <p>Republica de Francia 6 vs 3 El Prado </p>
+    </section>
+
+    <section id="contacts">
+      <h2>Contacto</h2>
+      <p>¿Quieres enviar noticias o sugerencias? Escríbenos a <b>contacto@deporteshoy.com</b></p>
+    </section>
+
+    <!-- 🔹 Soporte con chatbot -->
+    <section id="soporte">
+      <h2>Soporte Deportivo 🤖</h2>
+      <div id="chatbox"></div>
+      <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
+      <button id="sendBtn">Enviar</button>
+    </section>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const sidebar = document.getElementById("sidebar");
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+
+    // Chatbot Frontend
+    const chatbox = document.getElementById("chatbox");
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
+
+    function addMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.classList.add("msg");
+      msg.innerHTML = `<span class="${sender}">${sender === "user" ? "Tú" : "Bot"}:</span> ${text}`;
+      chatbox.appendChild(msg);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    sendBtn.addEventListener("click", () => {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      addMessage("user", text);
+      userInput.value = "";
+
+      fetch("http://127.0.0.1:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mensaje: text })
+      })
+      .then(res => res.json())
+      .then(data => {
+        addMessage("bot", data.respuesta);
+      })
+      .catch(() => {
+        addMessage("bot", "⚠️ Error de conexión con el servidor.");
+      });
+    });
+  </script>
+</body>
+</html>
+
